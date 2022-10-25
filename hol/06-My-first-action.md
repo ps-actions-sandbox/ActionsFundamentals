@@ -124,7 +124,7 @@ jobs:
 If time permits you can create a release and then use the action in a workflow in another repository.
 
 > **Note**  
-> You can only publish a GitHub Action lat exists in the root of a repository.
+> You can only publish a GitHub Action that exists in the root of a repository.
 
 1. Create a new public repository `hello-world-docker-action` and copy all the files from [hello-world-docker-action](../hello-world-docker-action) to it.
 
