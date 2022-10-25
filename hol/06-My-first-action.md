@@ -123,11 +123,16 @@ jobs:
 
 If time permits you can create a release and then use the action in a workflow in another repository.
 
-1. Create a [new release](/../..releases/new) with a tag `v1` and the title `v1`. Click `Generate release notes` and publish the release.
+> **Note**  
+> You can only publish a GitHub Action lat exists in the root of a repository.
+
+1. Create a new public repository `hello-world-docker-action` and copy all the files from [hello-world-docker-action](../hello-world-docker-action) to it.
+
+2. Create a [new release](/../..releases/new) with a tag `v1` and the title `v1`. Click `Generate release notes` and publish the release.
 
 <img width="600" alt="image" src="https://user-images.githubusercontent.com/5276337/174241482-6d3d0c34-9d55-4e3d-86fa-8ac28055cea8.png">
 
-2. Create a new repository or use another existing one and create a simple workflow that calls the action your created in version `v1`.
+3. Create a new repository or use another existing one and create a simple workflow that calls the action your created in version `v1`.
 
 <details>
   <summary>Solution</summary>
@@ -141,7 +146,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:   
       - name: Say hello
-        uses: <your-github-username>/GitHubBootcamp/hello-world-docker-action@v1
+        uses: <your-github-username>/hello-world-docker-action@v1
         with:
           who-to-greet: '@octocat'
 ```
