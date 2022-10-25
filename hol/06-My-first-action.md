@@ -71,7 +71,7 @@ ENTRYPOINT ["/entrypoint.sh"]
 
 echo "hello $1"
 
-echo "::set-output name=time::$(date)"
+echo "time=$(date)" >> $GITHUB_OUTPUT
 ```
   
 </details>
@@ -143,7 +143,7 @@ jobs:
       - name: Say hello
         uses: <your-github-username>/GitHubBootcamp/hello-world-docker-action@v1
         with:
-          who-to-greet: '@wulfland'
+          who-to-greet: '@octocat'
 ```
   
 </details>
