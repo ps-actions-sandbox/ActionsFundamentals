@@ -1,0 +1,22 @@
+name: Init
+
+on: [create, workflow_dispatch]
+
+jobs:
+  initialize_repo:
+    runs-on: ubuntu-latest
+    if: ${{ github.ref == 'refs/heads/main' }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2.4.2
+      - name: Create Issue
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh issue create -t "❓ What is your experience with GitHub?" -b "What is your experience with GitHub? Whats is your experience with other CI/CD tools? Comment below 👇"
+          gh issue create -t "❓ What do you want to learn?" -b "What is it you want to learn? What specific scnearios are you interrested in? Comment below 👇"
+          gh issue create -t "🔍 Retro Day one: What was good?" -b "What did you like at day one of this course? What was good? Comment below 👇"
+          gh issue create -t "🔍 Retro Day one: What can be improved?" -b "What can be improved? What was missing? Any additional comments? Comment below 👇"
+          gh issue create -t "❤️ What was the best feature you learned yesterday?" -b "What was the GitHub Actions feature you liked best that you have learned about yesterday the first time? If you want add your hobby to share it with the group. Comment below 👇"        
+          gh issue create -t "🔍 Retro Day two: What was good?" -b "What did you like at day one of this course? What was good? Comment below 👇"
+          gh issue create -t "🔍 Retro Day two: What can be improved?" -b "What can be improved? What was missing? Any additional comments? Comment below 👇"
