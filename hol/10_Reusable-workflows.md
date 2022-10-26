@@ -65,7 +65,7 @@ named `current-time` to the current date and time (use `$(date)` for that).
 ```YAML
       - name: Set time
         id: time
-        run: echo "::set-output name=current-time::$(date)"
+        run: echo "time=$(date)" >> $GITHUB_OUTPUT
 ```
   
 </details>
@@ -126,7 +126,7 @@ jobs:
         run: echo "Hello ${{ inputs.who-to-greet }}"
       - name: Set time
         id: time
-        run: echo "::set-output name=current-time::$(date)"
+        run: echo "time=$(date)" >> $GITHUB_OUTPUT
 ```
   
 </details>
@@ -157,7 +157,7 @@ jobs:
   call-workflow:
     uses: ./.github/workflows/reusable.yml
     with: 
-      who-to-greet: '@wulfland'
+      who-to-greet: '@octocat'
 ```
   
 </details>
