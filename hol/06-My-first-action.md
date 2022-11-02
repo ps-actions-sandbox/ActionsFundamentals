@@ -41,7 +41,7 @@ runs:
   
 </details>
 
-3. Commit the file (`[skip ci]` to nit run a build, yet).
+3. Commit the file (`[skip ci]` to not run a build, yet).
 4. Inside the `hello-world-docker-action` folder create the `Dockerfile`. The container inherits `FROM` `alpine:3.10` and 
    should copy and execute a file `entrypoint.sh`.
 
