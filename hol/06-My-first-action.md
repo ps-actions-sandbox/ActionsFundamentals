@@ -76,7 +76,7 @@ echo "time=$(date)" >> $GITHUB_OUTPUT
   
 </details>
 
-7. Commit the file (`[skip ci]` to nit run a build, yet).
+7. Commit the file (`[skip ci]` to not run a build, yet).
 
 ## Testing the action
 
