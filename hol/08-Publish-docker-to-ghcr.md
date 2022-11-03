@@ -2,7 +2,7 @@
 
 In this hands-on lab you will create a docker container and publishing it automatically to GitHub packages using GitHub Actions.
 
-1. Create a new repsitory `container-demo` and add a new file namend `Dockerfile` (without an extension). Add the following content:
+1. Create a new repository `container-demo` and add a new file named `Dockerfile` (without an extension). Add the following content:
 
     ```dockerfile
     FROM alpine
