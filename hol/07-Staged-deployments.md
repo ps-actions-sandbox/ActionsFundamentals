@@ -114,7 +114,7 @@ Add a input of the type environment to the `workflow_dispatch` trigger.
 
 <img width="200" alt="image" src="https://user-images.githubusercontent.com/5276337/174120314-c900585c-6b94-4fc2-8fe9-92452b0cf187.png">
 
-4. The result looks like this and contaisn the approval and the URL for the production environment:
+4. The result looks like this and contains the approval and the URL for the production environment:
 
 <img width="800" alt="image" src="https://user-images.githubusercontent.com/5276337/174120381-cef48594-6663-481a-aadd-1ef0dbd50b0a.png">
 
