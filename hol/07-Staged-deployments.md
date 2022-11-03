@@ -10,7 +10,7 @@ This hands on lab is based on [My first workflow](05-My-first-workflow.md) and a
 
 ## Creating and protecting environments
 
-1. Got to [Settings](/../../settings) | [Environments](/../../settings/environments) and click [New environment](/../../settings/environments/new)
+1. Go to [Settings](/../../settings) | [Environments](/../../settings/environments) and click [New environment](/../../settings/environments/new)
 2. Enter the name `Production` and click `Configure environment`
 3. Add yourself as the `Required reviewer` for this environment: 
 
