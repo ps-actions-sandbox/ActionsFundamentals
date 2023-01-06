@@ -10,7 +10,7 @@ This hands on lab is based on [My first workflow](05-My-first-workflow.md) and a
 
 ## Creating and protecting environments
 
-1. Got to [Settings](/../../settings) | [Environments](/../../settings/environments) and click [New environment](/../../settings/environments/new)
+1. Go to [Settings](/../../settings) | [Environments](/../../settings/environments) and click [New environment](/../../settings/environments/new)
 2. Enter the name `Production` and click `Configure environment`
 3. Add yourself as the `Required reviewer` for this environment: 
 
@@ -114,7 +114,7 @@ Add a input of the type environment to the `workflow_dispatch` trigger.
 
 <img width="200" alt="image" src="https://user-images.githubusercontent.com/5276337/174120314-c900585c-6b94-4fc2-8fe9-92452b0cf187.png">
 
-4. The result looks like this and contaisn the approval and the URL for the production environment:
+4. The result looks like this and contains the approval and the URL for the production environment:
 
 <img width="800" alt="image" src="https://user-images.githubusercontent.com/5276337/174120381-cef48594-6663-481a-aadd-1ef0dbd50b0a.png">
 
