@@ -10,7 +10,7 @@ This hands on lab consists of the following steps:
 
 ## Creating the action
 
-1. Create a [new file](/../../new/main) `hello-world-docker-action/action.yml` (paste the file name with the path in the box):
+1. Create a new file [`hello-world-docker-action/action.yml`](/../../new/main?filename=hello-world-docker-action%2Faction.yml):
 <img width="400" alt="image" src="https://user-images.githubusercontent.com/5276337/174234628-14f58066-3188-42a6-9204-99c577558c08.png">
 
 2. Add content to the `action.yml` file (see the [template](https://github.com/actions/hello-world-docker-action) and
@@ -42,8 +42,7 @@ runs:
 </details>
 
 3. Commit the file (`[skip ci]` to not run a build, yet).
-4. Inside the `hello-world-docker-action` folder create the `Dockerfile`. The container inherits `FROM` `alpine:3.10` and
-   should copy and execute a file `entrypoint.sh`.
+4. Inside the `hello-world-docker-action` folder create the [`Dockerfile`](/../../new/main?filename=hello-world-docker-action%2FDockerfile). The container inherits `FROM alpine:3.10` and should copy and execute a file `entrypoint.sh`.
 
 <details>
   <summary>Solution</summary>
@@ -61,7 +60,7 @@ ENTRYPOINT ["/entrypoint.sh"]
 </details>
 
 5. Commit the file (`[skip ci]` to skip running a build, for now).
-6. Create the file `entrypoint.sh` in the folder. It is a simple bash script that writes a message to the console and sets the output parameter.
+6. Create the file [`entrypoint.sh`](/../../new/main?filename=hello-world-docker-action%2Fentrypoint.sh) in the folder. It is a simple bash script that writes a message to the console and sets the output parameter.
 
 <details>
   <summary>Solution</summary>
@@ -80,7 +79,7 @@ echo "time=$(date)" >> $GITHUB_OUTPUT
 
 ## Testing the action
 
-1. To test the action we create a [new workflow file](/../..new/main) `.github/workflows/hello-world-docker-ci.yml`.
+1. To test the action we create a new workflow file [`.github/workflows/hello-world-docker-ci.yml`](/../../new/main?filename=.github%2Fworkflows%2Fhello-world-docker-ci.yml&workflow_template=blank).
 2. The workflow should run on every push if the action has changed. Also add a manual trigger to start the build manually.
    Checkout the repository to reference the action locally and without a git reference.
 
