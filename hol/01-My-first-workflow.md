@@ -110,7 +110,7 @@ jobs:
 
 <img width="400" alt="image" src="https://user-images.githubusercontent.com/5276337/174107136-af9187c1-dbee-4109-9ddc-f2abd4830282.png">
 
-5. Verify you other triggers by modifying the [README.md](README.md) file:
+5. Verify you other triggers by modifying the [README.md](/README.md) file:
   - Modify and commit: triggers build (`push`)
   - Modify and add `[skip ci]` (not triggering the workflow):
   <img width="350" alt="image" src="https://user-images.githubusercontent.com/5276337/174110845-93d4a38a-9c8a-4336-9b6a-9089ea9a1cfd.png">
