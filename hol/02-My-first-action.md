@@ -100,8 +100,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v3.0.2
-    
+        uses: actions/checkout@v3.3.0
+
       - name: Run my own container action
         id: hello-action
         uses: ./hello-world-docker-action
