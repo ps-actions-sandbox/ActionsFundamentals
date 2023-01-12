@@ -1,4 +1,4 @@
-# 🔨 Hands-on: Staged deployments 
+# 🔨 Hands-on: Staged deployments
 
 In this hands-on lab your will create environments and a staged deployment workflow with approvals.
 
@@ -12,7 +12,7 @@ This hands on lab is based on [My first workflow](05-My-first-workflow.md) and a
 
 1. Go to [Settings](/../../settings) | [Environments](/../../settings/environments) and click [New environment](/../../settings/environments/new)
 2. Enter the name `Production` and click `Configure environment`
-3. Add yourself as the `Required reviewer` for this environment: 
+3. Add yourself as the `Required reviewer` for this environment:
 
 <img width="349" alt="image" src="https://user-images.githubusercontent.com/5276337/174113475-967127de-45a7-4dc9-8477-4de4df62c7e6.png">
 
@@ -28,19 +28,19 @@ Add a input of the type environment to the `workflow_dispatch` trigger.
 
 <details>
   <summary>Solution</summary>
-  
+
 ```YAML
   workflow_dispatch:
     inputs:
       environment:
         description: 'Environment to deploy to'
         type: environment
-        required: true 
+        required: true
 ```
-  
+
 </details>
-  
-## Chaining workflow steps and conditional execution 
+
+## Chaining workflow steps and conditional execution
 
 1. Now add 3 jobs to the workflow file:
   - Test: runs on `ubuntu-latest` after `Build`. Only runs when the workflow was triggered manually. Runs on the environment `Test`. The job writes `Testing...` to the workflow log.
@@ -49,30 +49,30 @@ Add a input of the type environment to the `workflow_dispatch` trigger.
 
 <details>
   <summary>Solution</summary>
-  
+
 ```YAML
   Test:
     runs-on: ubuntu-latest
-    if: github.event_name == 'workflow_dispatch' 
+    if: github.event_name == 'workflow_dispatch'
     needs: Build
     environment: Test
     steps:
       - run: echo "🧪 Testing..."
-      
+
   Load-Test:
     runs-on: ubuntu-latest
-    if: github.event_name == 'workflow_dispatch' 
+    if: github.event_name == 'workflow_dispatch'
     needs: Build
     environment: Load-Test
     steps:
       - run: |
           echo "🧪 Testing..."
           sleep 15
-          
+
   Production:
     runs-on: ubuntu-latest
     needs: [Test, Load-Test]
-    environment: 
+    environment:
       name: Production
       url: https://writeabout.net
     if: github.event.inputs.environment == 'Production'
@@ -93,10 +93,10 @@ Add a input of the type environment to the `workflow_dispatch` trigger.
           echo "🚀 Step 5..."
           sleep 10
 ```
-  
+
 </details>
 
-2. Trigger the workflow and select `Production` as the environment: 
+2. Trigger the workflow and select `Production` as the environment:
 
 <img width="212" alt="image" src="https://user-images.githubusercontent.com/5276337/174119722-9b76d479-e355-414b-a534-03d8634536ef.png">
 
@@ -120,7 +120,7 @@ Add a input of the type environment to the `workflow_dispatch` trigger.
 
 ## Summary
 
-In this lab you have learned to create and protect environments in GitHub and use them in a workflow. You have also learned to conditionally 
+In this lab you have learned to create and protect environments in GitHub and use them in a workflow. You have also learned to conditionally
 execute jobs or steps and to chain jobs using the `needs` keeword.
 
 You can continue with the [README](../README.md#part-4--cicd-and-automation).

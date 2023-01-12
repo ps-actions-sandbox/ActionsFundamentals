@@ -1,6 +1,5 @@
 # Getting ready
 
-
 ## Step 1: Set up your GitHub.com account
 
 For this class, we will use a public account on GitHub.com. We do this for a few reasons:

@@ -13,24 +13,24 @@ This hands on lab consists of the following steps:
 1. Create a [new file](/../../new/main) `hello-world-docker-action/action.yml` (paste the file name with the path in the box):
 <img width="400" alt="image" src="https://user-images.githubusercontent.com/5276337/174234628-14f58066-3188-42a6-9204-99c577558c08.png">
 
-2. Add content to the `action.yml` file (see the [template](https://github.com/actions/hello-world-docker-action) and 
-  [help](https://github.com/actions/hello-world-docker-action)). Have the action run a `Dockerfile` and pass 
+2. Add content to the `action.yml` file (see the [template](https://github.com/actions/hello-world-docker-action) and
+  [help](https://github.com/actions/hello-world-docker-action)). Have the action run a `Dockerfile` and pass
   in the parameter `who-to-greet` with the default value `world`. Also give back an output that returns the current time.
-  
+
 
 <details>
   <summary>Solution</summary>
-  
+
 ```YAML
 name: 'Hello World Docker Action'
 description: 'Say hello to a user or the world.'
-inputs: 
+inputs:
   who-to-greet:
     description: 'Who to greet'
     required: true
     default: 'world'
 outputs:
-  time: 
+  time:
     description: 'The time we said hello.'
 runs:
   using: 'docker'
@@ -38,16 +38,16 @@ runs:
   args:
     - ${{ inputs.who-to-greet }}
 ```
-  
+
 </details>
 
 3. Commit the file (`[skip ci]` to not run a build, yet).
-4. Inside the `hello-world-docker-action` folder create the `Dockerfile`. The container inherits `FROM` `alpine:3.10` and 
+4. Inside the `hello-world-docker-action` folder create the `Dockerfile`. The container inherits `FROM` `alpine:3.10` and
    should copy and execute a file `entrypoint.sh`.
 
 <details>
   <summary>Solution</summary>
-  
+
 ```dockerfile
 FROM alpine:3.10
 
@@ -57,7 +57,7 @@ RUN chmod +x entrypoint.sh
 
 ENTRYPOINT ["/entrypoint.sh"]
 ```
-  
+
 </details>
 
 5. Commit the file (`[skip ci]` to skip running a build, for now).
@@ -65,7 +65,7 @@ ENTRYPOINT ["/entrypoint.sh"]
 
 <details>
   <summary>Solution</summary>
-  
+
 ```bash
 #!/bin/sh -l
 
@@ -73,7 +73,7 @@ echo "hello $1"
 
 echo "time=$(date)" >> $GITHUB_OUTPUT
 ```
-  
+
 </details>
 
 7. Commit the file (`[skip ci]` to not run a build, yet).
@@ -81,38 +81,38 @@ echo "time=$(date)" >> $GITHUB_OUTPUT
 ## Testing the action
 
 1. To test the action we create a [new workflow file](/../..new/main) `.github/workflows/hello-world-docker-ci.yml`.
-2. The workflow should run on every push if the action has changed. Also add a manual trigger to start the build manually. 
-   Checkout the repository to reference the action locally and without a git reference. 
+2. The workflow should run on every push if the action has changed. Also add a manual trigger to start the build manually.
+   Checkout the repository to reference the action locally and without a git reference.
 
 <details>
   <summary>Solution</summary>
-  
+
 ```YAML
-name: CI Build for Docker Action 
+name: CI Build for Docker Action
 on:
   push:
     branches: [ main ]
     paths: [ hello-world-docker-action/** ]
   workflow_dispatch:
-        
+
 jobs:
   test-action:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v3.0.2
-    
+
       - name: Run my own container action
         id: hello-action
         uses: ./hello-world-docker-action
         with:
           who-to-greet: '@wulfland'
-          
+
       - name: Output time set in the container
         run: echo "The time was ${{ steps.hello-action.outputs.time }} when the action said hello"
 
 ```
-  
+
 </details>
 
 3. Run the workflow and see how the parameters are passed into the action and back to the workflow.
@@ -123,7 +123,7 @@ jobs:
 
 If time permits you can create a release and then use the action in a workflow in another repository.
 
-> **Note**  
+> **Note**
 > You can only publish a GitHub Action that exists in the root of a repository.
 
 1. Create a new public repository `hello-world-docker-action` and copy all the files from [hello-world-docker-action](../hello-world-docker-action) to it.
@@ -136,25 +136,25 @@ If time permits you can create a release and then use the action in a workflow i
 
 <details>
   <summary>Solution</summary>
-  
+
 ```YAML
 name: Test
 on: [workflow_dispatch]
-        
+
 jobs:
   test-action:
     runs-on: ubuntu-latest
-    steps:   
+    steps:
       - name: Say hello
         uses: <your-github-username>/hello-world-docker-action@v1
         with:
           who-to-greet: '@octocat'
 ```
-  
+
 </details>
 
-## Summary 
+## Summary
 
 In this hands-on lab you've learned how to create a docker action, pass in parameters, return values to your workflow, and to test the action locally with a CI build.
-  
+
 You can continue now with [Staged deployments](03-Staged-deployments.md).
