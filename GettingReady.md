@@ -1,12 +1,11 @@
 # Getting ready
 
-
 ## Step 1: Set up your GitHub.com account
 
 For this class, we will use a public account on GitHub.com. We do this for a few reasons:
 
-We don't want you to "practice" in repositories that contain real code
-We are going to break some things, so we can teach you how to fix them (therefore, refer to the line above)
+We don't want you to "practice" in repositories that contain real code.
+We are going to break some things, so we can teach you how to fix them (therefore, refer to the line above).
 
 You can set up your free account by following these steps:
 

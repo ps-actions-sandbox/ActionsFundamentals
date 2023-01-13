@@ -13,7 +13,7 @@ Go to [Code](/../../) tab of this repository and click `Use this template`:
 
 <img width="400" alt="2022-09-18_11-24-58" src="https://user-images.githubusercontent.com/5276337/190895393-6fa0fad9-e05c-4fea-8126-a291b087d663.png">
 
-Select your GitHub user as the owner and name the repository. Leave the repo public to have unlimited action minutes: 
+Select your GitHub user as the owner and name the repository. Leave the repo public to have unlimited action minutes:
 
 <img width="400" alt="2022-09-18_11-25-57" src="https://user-images.githubusercontent.com/5276337/190895398-751a1ec9-c1cf-497f-beb7-a6b53d4d911e.png">
 
@@ -45,7 +45,7 @@ name: GitHub Actions Demo
 
 <details>
   <summary>Solution</summary>
-  
+
 ```YAML
 on:
   push:
@@ -57,17 +57,17 @@ on:
     - cron: '15 6 * * 0'
   workflow_dispatch:
 ```
-  
+
 </details>
 
 6. Create a job `Build` that runs on the latest Ubuntu image on GitHub hosted runners. Check the documentation of the [virtual environments](https://github.com/actions/virtual-environments/) what label to use and what version it is. The job should do the following things:
   - Output the name of the event that triggered the workflow
   - Output the name of the branch that the repository is currently referencing
-  - List all files in the repository 
+  - List all files in the repository
 
 <details>
   <summary>Solution</summary>
-  
+
 ```YAML
 jobs:
   Build:
@@ -84,10 +84,10 @@ jobs:
           echo "The repository ${{ github.repository }} contains the following files:"
           tree
 ```
-  
+
 </details>
 
-7. Commit the workflow file - and trigger the workflow manually. It should not run automatically if your path filter works. Got to [Action](/../../Actions),  select [GitHub Actions Demo](/../../actions/workflows/github-actions-demo.yml) and `Run workflow`: 
+7. Commit the workflow file - and trigger the workflow manually. It should not run automatically if your path filter works. Got to [Action](/../../Actions),  select [GitHub Actions Demo](/../../actions/workflows/github-actions-demo.yml) and `Run workflow`:
 
 <img width="600" alt="image" src="https://user-images.githubusercontent.com/5276337/174105162-19f33fd1-8533-4860-9279-88fabec84451.png">
 
@@ -97,7 +97,7 @@ jobs:
 1. Click on your workflow run:
 
 <img width="600" alt="image" src="https://user-images.githubusercontent.com/5276337/174105747-0e205e0d-37cc-464c-905b-5b29be74fc75.png">
- 
+
 2. Click on the job 'Build':
 
 <img width="400" alt="image" src="https://user-images.githubusercontent.com/5276337/174105990-a1c204c6-fb7d-44a4-9343-6982899edb25.png">
@@ -110,11 +110,11 @@ jobs:
 
 <img width="400" alt="image" src="https://user-images.githubusercontent.com/5276337/174107136-af9187c1-dbee-4109-9ddc-f2abd4830282.png">
 
-5. Verify you other triggers by modifying the [README.md](README.md) file:
+5. Verify you other triggers by modifying the [README.md](/README.md) file:
   - Modify and commit: triggers build (`push`)
-  - Modify and add `[skip ci]` (not triggering the workflow):  
-  <img width="350" alt="image" src="https://user-images.githubusercontent.com/5276337/174110845-93d4a38a-9c8a-4336-9b6a-9089ea9a1cfd.png"> 
-  
+  - Modify and add `[skip ci]` (not triggering the workflow):
+  <img width="350" alt="image" src="https://user-images.githubusercontent.com/5276337/174110845-93d4a38a-9c8a-4336-9b6a-9089ea9a1cfd.png">
+
   - Modify and create pull request (trigger: `pull_request`)
 
 ## Summary
