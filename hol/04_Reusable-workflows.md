@@ -27,6 +27,7 @@ name: Reusable workflow
   <summary>Solution</summary>
 
 ```YAML
+on:
   workflow_call:
     inputs:
       who-to-greet:
@@ -77,7 +78,7 @@ named `current-time` to the current date and time (use `$(date)` for that).
 
 ```YAML
    outputs:
-      current-time: ${{ steps.time.outputs.current-time }}
+      current-time: ${{ steps.time.outputs.time }}
 ```
 
 </details>
@@ -120,7 +121,7 @@ jobs:
   reusable-job:
     runs-on: ubuntu-latest
     outputs:
-      current-time: ${{ steps.time.outputs.current-time }}
+      current-time: ${{ steps.time.outputs.time }}
     steps:
       - name: Greet someone
         run: echo "Hello ${{ inputs.who-to-greet }}"
