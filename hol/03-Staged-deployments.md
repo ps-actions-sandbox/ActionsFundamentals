@@ -2,7 +2,7 @@
 
 In this hands-on lab your will create environments and a staged deployment workflow with approvals.
 
-This hands on lab is based on [My first workflow](05-My-first-workflow.md) and adds the following steps:
+This hands on lab is based on [My first workflow](01-My-first-workflow.md) and adds the following steps:
 - [Creating and protecting environments](#creating-and-protecting-environments)
 - [Adding a input for picking environments to manual workflow trigger](#adding-a-input-for-picking-environments-to-manual-workflow-trigger)
 - [Chaining workflow steps and conditional execution](#chaining-workflow-steps-and-conditional-execution)
