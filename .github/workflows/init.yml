@@ -4,6 +4,7 @@ on: [create, workflow_dispatch]
 
 permissions: 
   issues: write
+  contents: read
 
 jobs:
   initialize_repo:
