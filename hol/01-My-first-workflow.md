@@ -102,7 +102,7 @@ jobs:
 
 <img width="400" alt="image" src="https://user-images.githubusercontent.com/5276337/174105990-a1c204c6-fb7d-44a4-9343-6982899edb25.png">
 
-3. Expand `Set up job` and note the log woth line number (line numbers are links). Check the information about the virtual environment and included software:
+3. Expand `Set up job` and note the log with the line number (line numbers are links). Check the information about the virtual environment and included software:
 
 <img width="600" alt="image" src="https://user-images.githubusercontent.com/5276337/174106759-c2a8f933-74cf-42a4-899b-b29dc67eccd7.png">
 
