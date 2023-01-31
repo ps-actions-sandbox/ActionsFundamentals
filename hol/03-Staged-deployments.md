@@ -1,6 +1,7 @@
 # 🔨 Hands-on: Staged deployments
 
 In this hands-on lab your will create environments and a staged deployment workflow with approvals.
+> Note: you can only do this on public repos for free accounts. Adding environments for `private` repos is only available for Organizations with a Team account (or higher) and users with GitHub Pro accounts.
 
 This hands on lab is based on [My first workflow](01-My-first-workflow.md) and adds the following steps:
 - [Creating and protecting environments](#creating-and-protecting-environments)
