@@ -51,7 +51,7 @@ Please follow [these instructions](GettingReady.md) and make sure you have set u
 - [ ] Action policies
 - [ ] Running your workflows
 - [ ] Sharing workflows
-- [ ] 🔨 Hands-on: [Reusable workflows](hol/04_Reusable-workflows.md)
+- [ ] 🔨 Hands-on: [Reusable workflows](hol/04-Reusable-workflows.md)
 - [ ] Best practices and security
 
 
