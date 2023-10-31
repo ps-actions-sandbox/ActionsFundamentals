@@ -23,7 +23,7 @@ Continue now in the new repository.
 
 Go to **Actions** | [New Workflow](/../../actions/new) and click on [set up a workflow yourself](/../../new/main?filename=.github%2Fworkflows%2Fmain.yml&workflow_template=blank).
 
-1. Rename the file `main.yml` in the `.github/workflows` directory to `github-actions-demo.yml`.
+1. Rename the file `init.yml` in the `.github/workflows` directory to `github-actions-demo.yml`.
 <img width="400" alt="image" src="https://user-images.githubusercontent.com/5276337/174096754-4e2d7219-9caf-42e8-bfd9-c190762886d3.png">
 
 2. Remove the template content - we want to create the workflow from scratch.
