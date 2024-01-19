@@ -131,7 +131,9 @@ If time permits you can create a release and then use the action in a workflow i
 
 <img width="600" alt="image" src="https://user-images.githubusercontent.com/5276337/174241482-6d3d0c34-9d55-4e3d-86fa-8ac28055cea8.png">
 
-3. Create a new repository or use another existing one and create a simple workflow that calls the action your created in version `v1`.
+3. Go to Settings > Actions > General > Access, and ensure `Accessible from repositories owned by the user '<your-github-username>` is selected.
+
+4. Create a new repository or use another existing one and create a simple workflow that calls the action your created in version `v1`.
 
 <details>
   <summary>Solution</summary>
