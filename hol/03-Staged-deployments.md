@@ -25,7 +25,8 @@ This hands on lab is based on [My first workflow](01-My-first-workflow.md) and a
 
 ## Adding a input for picking environments to manual workflow trigger
 
-Add a input of the type environment to the `workflow_dispatch` trigger.
+Modify the workflow yml file you created in hands on lab 1 ('My first workflow').
+Add an input of the type environment to the `workflow_dispatch` trigger that you created previously.
 
 <details>
   <summary>Solution</summary>
