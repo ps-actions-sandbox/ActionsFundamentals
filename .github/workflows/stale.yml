@@ -18,4 +18,5 @@ jobs:
       pull-requests: write
 
     steps:
+    - uses: actions/checkout@v4
     - run: gh issue close 1
