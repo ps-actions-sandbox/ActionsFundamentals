@@ -1,0 +1,12 @@
+name: my-first-action
+
+on: 
+  workflow_dispatch:
+
+jobs: 
+  my_job: 
+    name: hello world
+    runs-on: "ubuntu-22.04"
+    steps:
+      - run: | 
+          echo "hello world!"
