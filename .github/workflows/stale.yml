@@ -19,4 +19,6 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
-    - run: gh issue close 1
+    - run: | 
+        title="${{ github.event.pull_request.title }}"
+
