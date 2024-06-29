@@ -8,4 +8,4 @@ jobs:
     runs-on: "ubuntu-22.04"
     steps:
       - run: | 
-          echo ${{ toJSON(github) }}
+          echo ${{ format('Hello {0} {1} {2}', 'Mona', 'the', 'Octocat') }}
