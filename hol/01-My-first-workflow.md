@@ -108,7 +108,7 @@ jobs:
 
 4. Expand your jobs and check that the output was correct.
 
-<img width="400" alt="image" src="https://user-images.githubusercontent.com/5276337/174107136-af9187c1-dbee-4109-9ddc-f2abd4830282.png">
+<img width="400" alt="image" src="https://user-images.githubusercontent.com/5276337/174107136-af9187c1-dbee-4109-9ddc-f2abd4830282.png"> 
 
 5. Verify your other triggers by modifying the [README.md](/README.md) file:
   - Modify and commit: triggers build (`push`)
