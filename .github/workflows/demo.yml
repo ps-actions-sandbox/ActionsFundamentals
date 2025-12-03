@@ -1,0 +1,22 @@
+
+name: CI Workflow Trigger
+
+on:
+  push:
+    branches:
+      - notrealbranch
+    tags:
+      - 'v*'          # v1, v1.2, v1.2.3
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Verify runner
+        run: |
+          echo "Runner OS: $RUNNER_OS"
+          uname -a
