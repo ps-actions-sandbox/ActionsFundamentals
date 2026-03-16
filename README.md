@@ -26,7 +26,7 @@ Please follow [these instructions](GettingReady.md) and make sure you have set u
 - [ ] GitHub Actions Fundamentals
 - [ ] The YAML syntax
 - [ ] Basic workflow syntax
-- [ ] Events that trigger workflow
+- [skip ci ] Events that trigger workflow
 - [ ] Jobs and steps
 - [ ] :mag: Demo: Creating a workflow
 - [ ] 🔨 Hands-on: [My first Action workflow](hol/01-My-first-workflow.md)
