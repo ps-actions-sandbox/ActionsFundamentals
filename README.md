@@ -1,4 +1,4 @@
-# GitHub Actions Fundamentals
+# GitHub Actions Fundamentals (Marion's Copy)
 
 Repo for the `GitHub Actions Fundamentals` training.
 
