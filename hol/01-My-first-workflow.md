@@ -117,6 +117,6 @@ jobs:
 
   - Modify the [README.md](/README.md) file and create a pull request (trigger: `pull_request`)
 
-## Summary
+## Summary - change the read me for pull request
 
 In this hands-on you've learned to create you first workflow with triggers, jobs, steps, and expressions. Next you will write your [first GitHub Action](02-My-first-action.md).
